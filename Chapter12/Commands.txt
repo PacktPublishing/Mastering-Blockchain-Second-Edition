@@ -1,0 +1,26 @@
+$ geth --testnet  
+$ ./geth init ~/ethpriv/privategenesis.json --datadir ~/ethpriv/ 
+$ ./geth --datadir ~/etherprivate/ --networkid 786 --rpc --rpcapi 'web3,eth,net,debug,personal'  --rpccorsdomain '*' 
+$ geth attach ipc:.ethereum/privatenet/geth.ipc  
+personal.newAccount("Password123") 
+> miner.setEtherbase(personal.listAccounts[0]) 
+> eth.getBalance(eth.coinbase).toNumber(); 
+> miner.start(2)  
+> miner.stop  
+> eth.getBalance(eth.coinbase).toNumber();  
+> eth.gasPrice
+> eth.blockNumber
+> debug.getBlockRlp(0) 
+ personal.newAccount("Password123")
+> personal.unlockAccount ("0xcf61d213faa9acadbf0d110e1397caf20445c58f")
+ > eth.sendTransaction({from: "0x76f11b383dbc3becf8c5d9309219878caae265c3", to: "0xcce6450413ac80f9ee8bd97ca02b92c065d77abc", value: 1000})
+> eth.sendTransaction({from: personal.listAccounts[0], to: personal.listAccounts[1], value: 1000})
+$ ./Ethereum Wallet --rpc ~/.ethereum/privatenet/geth.ipc 
+$./Ethereum Wallet --rpc http://127.0.0.1:8545
+$ git clone https://github.com/etherparty/explorer 
+$ cd explorer/  
+$ npm start
+geth --datadir .ethereum/privatenet/ --networkid 786 --rpc --rpccorsdomain 'http://localhost:8000'
+geth --datadir .ethereum/privatenet/ --networkid 786 --rpc --rpccorsdomain '*'
+$ python -m SimpleHTTPServer 7777
+./geth --datadir ~/etherprivate/ --networkid 786 --rpc --rpcapi 'web3,eth,net,debug,personal' --rpccorsdomain '*'

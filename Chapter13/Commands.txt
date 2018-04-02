@@ -1,0 +1,19 @@
+$ sudo apt-get install solc 
+$ sudo add-apt-repository ppa:ethereum/ethereum  
+$ sudo apt-get update 
+$ solc --version
+$ brew tap ethereum/ethereum
+$ brew install solidity
+$ brew linkapps solidity 
+$ solc --bin Addition.sol
+$ solc --gas Addition.sol
+$ solc --abi Addition.sol 
+$ solc --bin --abi --optimize -o bin Addition.sol
+$ curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash - sudo apt-get install -y nodejs 
+$ npm install -g ethereumjs-testrpc 
+$ testrpc  
+$ node -version 
+$ sudo npm install -g truffle 
+$ sudo npm install -g truffle
+$ truffle  
+$ git clone https://github.com/ConsenSys/truffle.git

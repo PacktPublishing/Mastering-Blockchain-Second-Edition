@@ -1,0 +1,24 @@
+geth --mine --minerthreads <n> 
+$ geth attach 
+miner.start(4) 
+miner.stop()
+geth --rpc
+$ ethminer -G 
+$ ethminer -M -C 
+$ ethminer -M -G
+$ ethminer -M -G --opencl-device 1
+ethminer -C -F http://ethereumpool.co/?miner=0.1@0x024a20cc5feba7f3dc3776075b3e61234eb1459 c@DrEquinox 
+> sudo apt-get install -y software-properties-common
+> sudo add-apt-repository -y ppa:ethereum/ethereum
+> sudo apt-get update
+> sudo apt-get install -y ethereum
+> geth 
+> sudo apt-get install cpp-ethereum  
+$ geth account new
+$ geth account list
+> personal.newAccount() 
+> eth.accounts
+bash <(curl https://get.parity.io -Lk)  
+$ parity ui  
+$ parity --geth --force-ui  
+$ parity account new

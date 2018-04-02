@@ -1,0 +1,2 @@
+$ bitcoin-cli getrawtransaction
+$ bitcoin-cli getdifficulty 

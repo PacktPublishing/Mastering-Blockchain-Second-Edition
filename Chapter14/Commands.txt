@@ -1,0 +1,56 @@
+$ geth --datadir .ethereum/privatenet/ --networkid 786 --rpc --rpcapi 'web3,net,eth,debug' --rpcport 8001 --rpccorsdomain 'http://localhost:7777'
+$ geth attach ipc: ~/etherprivate/geth.ipc  
+$ ./geth --datadir ~/etherprivate/ --networkid 786 --rpc -rpcapi 'web3,eth,debug,personal'  --rpccorsdomain '*' 
+$ ./geth attach ipc:/Users/drequinox/etherprivate/geth.ipc  
+> personal.listAccounts[0]
+> personal.unlockAccount(personal.listAccounts[0]) 
+> Miner.start(1)  
+> eth.getBalance(valuechecker.address) 
+> valuechecker.transactionHash 
+> valuechecker.abi 
+> valuechecker.Matcher.call(12)
+> valuechecker.Matcher.call(10)
+> valuechecker.Matcher.call(9)
+$ curl --request POST --data '{"jsonrpc":"2.0","method":"personal_listAccounts","params": [],"id":4}' localhost:8545 -H "Content-Type: application/json"
+$ npm install web3 
+$ python -m SimpleHTTPServer 7777
+$ mkdir testdapp 
+$ truffle init
+$ tree
+$ truffle unbox webpack 
+$ cat truffle.js  
+ $ truffle compile
+$ truffle test 
+ $ truffle migrate  
+$ npm run dev 
+$ truffle console
+truffle(development)> MetaCoin.address 
+truffle(development)> web3.eth.accounts[0] 
+truffle(development)> MetaCoin.web3.eth.getBalance(web3.eth.accounts[0]) 
+$ mkdir simplecontract 
+ $ cd simplecontract  
+$ truffle init 
+$ truffle console  
+truffle(development)> Addition.address 
+~$ mkdir ideapatent
+~$ cd ideapatent/ 
+~/ideapatent$ truffle init
+truffle compile
+$ truffle migrate 
+$ truffle console 
+>PatentIdea.deployed().then(function(instance){app = instance})
+truffle(development)>
+>truffle(development)> app.SaveIdeaHash("hello1")  
+> personal.unlockAccount(web3.eth.coinbase, "Password123", 15000)
+truffle(development)> app.isAlreadyHashed("hello1");  
+truffle(development)> app.isAlreadyHashed("hello3");
+$ curl https://dist.ipfs.io/go-ipfs/v0.4.4/go- ipfs_v0.4.4_linux-amd64.tar.gz -O 
+$ tar xvfz go-ipfs_v0.4.4_linux-amd64.tar.gz 
+$ mv go-ipfs/ipfs /usr/local/bin/ipfs 
+$ ipfs init initializing ipfs node at /home/imran/.ipfs 
+ipfs cat 
+/ipfs/QmYwAPJzv5CZsnA625s3Xf2nemtYgPpHdWEz79ojWnPbdG/readme 
+$ ipfs daemon  
+~/sampleproject/build$ ipfs add --recursive --progress. added QmVdYdY1uycf32e8NhMVEWSufMyvcj17w3DkUt6BgeAtx7 build/app.css 
+$ ipfs pin add QmSxpucr6J9rX3XQ3MBG8cVzLCrQFFKmMkTmpcNpjbtf3j  
+ 

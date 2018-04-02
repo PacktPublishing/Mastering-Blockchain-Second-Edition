@@ -1,0 +1,13 @@
+$ wget https://gethstore.blob.core.windows.net/builds/geth-linux- arm7-1.5.6-2a609af5.tar.gz
+$ tar -zxvf geth-linux-arm7-1.5.6-2a609af5.tar
+ $ ./geth init genesis.json
+> admin.nodeInfo
+$ geth --datadir .ethereum/privatenet/ --networkid 786 --maxpeers 5 --rpc --rpcapi web3,eth,debug,personal,net --rpcport 9001 --rpccorsdomain "*" -- port 30301 --identity "drequinox"  
+$ ./geth --networkid 786 --maxpeers 5 --rpc --rpcapi web3,eth,debug,personal,net --rpccorsdomain "*" --port 30302 --identity "raspberry" 
+$ geth attach 
+$ geth attach ipc:.ethereum/privatenet/geth.ipc  
+$ curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+ $ sudo apt-get install nodejs
+$ npm install onoff
+$ truffle migrate  
+$ node index.js  

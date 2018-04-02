@@ -1,0 +1,20 @@
+$ sudo apt-get update
+$ sudo apt-get install bitcoind
+$ sudo apt-get install bitcoin-qt
+$ sudo apt-get install bitcoin-qt bitcoind
+$ sudo apt-get install git
+$ mkdir bcsource
+$ cd bcsource
+$ git clone https://github.com/bitcoin/bitcoin.git
+$ cd bitcoin  
+$ ./autogen.sh 
+$ ./configure.sh 
+$ make 
+$ sudo make install  
+$ bitcoind --testnet -daemon
+$ bitcoin-cli --testnet <command>
+$ bitcoin-qt --testnet 
+$ bitcoind -regtest -daemon 
+$ bitcoin-cli -regtest generate 200  
+$ bitcoin-cli -regtest getbalance
+$ bitcoin-cli -regtest stop

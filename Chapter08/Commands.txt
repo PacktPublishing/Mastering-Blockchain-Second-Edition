@@ -1,0 +1,15 @@
+$ sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib  autoconf libtool ncurses-dev unzip git python zlib1g-dev wget bsdmainutils automake 
+$ git clone https://github.com/zcash/zcash.git 
+$ ./zcutil/fetch-param.sh
+ $ pwd
+$ ls -ltr 
+$ ./zcutil/build.sh -j$(nproc) 
+$ ./zcashd --daemon 
+$ ./zcash-cli z_getnewaddress
+$ ./zcash-cli getnewaddress  
+$ sudo apt-get install cmake build-essential libboost-all-dev git clone https://github.com/nicehash/nheqminer.git 
+$ cd nheqminer/nheqminer  
+$ mkdir build 
+$ cd build  
+$ cmake .. make
+$ ./nhequminer -l eu -u <btc address> -t <number of threads>  

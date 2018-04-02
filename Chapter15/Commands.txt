@@ -1,0 +1,13 @@
+$ git clone https://github.com/IntelLedger/sawtooth-core.git  
+$ cd sawtooth-core/tools
+$ vagrant up 
+$ vagrant halt  
+$ vagrant destroy  
+$ vagrant ssh  
+$ /project/sawtooth-core/bin/build_all  
+$ /project/sawtooth-core/docs/source/tutorial/genesis.sh  
+$ cd /project/saw-toothcore  
+$ ./bin/txnvalidator -v -F ledger.transaction.integer_key --config
+/home/ubuntu/sawtooth/v0.json  
+./bin/sawtooth keygen --key-dir validator/keys mkt 
+$ git clone https://github.com/corda/corda.git  

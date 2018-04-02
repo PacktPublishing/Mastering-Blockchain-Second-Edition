@@ -1,0 +1,37 @@
+$ openssl genpkey -algorithm RSA -out privatekey.pem -pkeyopt rsa_keygen_bits:1024
+$ cat privatekey.pem
+$ openssl rsa -pubout -in privatekey.pem -out publickey.pem 
+$ cat publickey.pem
+$ openssl rsa -text -in privatekey.pem 
+$ openssl pkey -in publickey.pem -pubin -text
+$ echo datatoencrypt > message.txt
+$ openssl rsautl -encrypt -inkey publickey.pem -pubin -in message.txt -out message.rsa 
+$ openssl rsautl -decrypt -inkey privatekey.pem -in message.rsa -out message.dec
+$ cat message.dec 
+$ openssl ecparam -list_curves
+$ openssl ecparam -name secp256k1 -genkey -noout -out ec-privatekey.pem
+$ cat ec-privatekey.pem
+$ openssl ec -in ec-privatekey.pem -pubout -out ec-pubkey.pem 
+$ cat ec-pubkey.pem
+$ openssl ec -in ec-privatekey.pem -text -noout 
+$ openssl ec -in ec-pubkey.pem -pubin -text -noout
+$ openssl ecparam -name secp256k1 -out secp256k1.pem 
+$ cat secp256k1.pem
+$ openssl ecparam -in secp256k1.pem -text -param_enc explicit -noout    
+$ echo -n 'Hello' | openssl dgst -sha256
+$ echo -n 'hello' | openssl dgst -sha256
+$ openssl dgst -sha256 message.txt 
+$ openssl dgst -sha256 -sign privatekey.pem -out signature.bin message.txt  
+$ ls -ltr 
+$ cat signature.bin
+$ openssl dgst -sha256 -verify publickey.pem -signature signature.bin message.txt
+$ openssl dgst -sha256 -verify publickey.pem -signature someothersignature.bin message.txt
+$ openssl ecparam -genkey -name secp256k1 -noout -out eccprivatekey.pem
+$ cat eccprivatekey.pem
+$ openssl ec -in eccprivatekey.pem -pubout -out eccpublickey.pem 
+$ echo testing > testsign.txt
+$ cat testsign.txt 
+$ openssl dgst -ecdsa-with-SHA1 -sign eccprivatekey.pem testsign.txt > ecsign.bin  
+$ openssl dgst -ecdsa-with-SHA1 -verify eccpublickey.pem -signature ecsign.bin testsign.txt 
+$ openssl req -new -key eccprivatekey.pem -x509 -nodes -days 365 -out ecccertificate.pem
+$ openssl x509 -in ecccertificate.pem -text -noout  

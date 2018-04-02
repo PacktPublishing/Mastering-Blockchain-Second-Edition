@@ -1,0 +1,12 @@
+$ sudo apt-get install openssl  
+$ openssl version
+$ openssl enc -aes-256-cbc -in message.txt -out message.bin 
+$ ls -ltr
+$ openssl enc -base64 -in message.bin -out message.b64
+$ ls -ltr
+$ cat message.b64
+$ openssl enc -d -aes-256-cbc -in message.bin -out message.dec
+$ cat message.dec 
+$ openssl enc -d -base64 -in message.b64 -out message.ptx
+$ ls -ltr
+$ cat message.ptx 

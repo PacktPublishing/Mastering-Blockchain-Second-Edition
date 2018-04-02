@@ -1,5 +1,5 @@
 # Mastering Blockchain - Second Edition
-This is the code repository for [Mastering Blockchain - Second Edition](https://www.packtpub.com/big-data-and-business-intelligence/mastering-blockchain-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781788839044), published by [Packt](www.packtpub.com). It contains all the supporting project files necessary to work through the book from start to finish.
+This is the code repository for [Mastering Blockchain - Second Edition](https://www.packtpub.com/big-data-and-business-intelligence/mastering-blockchain-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781788839044), published by [Packt](https://www.packtpub.com/). It contains all the supporting project files necessary to work through the book from start to finish.
 ## About the Book
 A blockchain is a distributed ledger that is replicated across multiple nodes and enables immutable, transparent and cryptographically secure record-keeping of transactions. The blockchain technology is the backbone of cryptocurrencies, and it has applications in finance, government, media and almost all other industries. Mastering Blockchain, Second Edition has been thoroughly updated and revised to provide a detailed description of this leading technology and its implementation in the real world.
 
